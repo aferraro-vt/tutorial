@@ -7,47 +7,20 @@
   
 <body>    
     
-<py-config>
-packages = ['numpy', 'matplotlib']
-
-[[fetch]]
-files = ['example.py', 'channels.py','modems.py','filters.py']
-from = 'src'
-to_folder = 'src'
-</py-config>
-
-	
-<div>TESTTTT</div>
-
+<py-env>
+- matplotlib
+- numpy
+- paths:
+	- src/channels.py
+	- src/modems.py
+</py-env>
 <py-script>
-
-import src.channels as channels
-import src.modems as modems
-
+import modems
 ask_2 = modems.ldapm(mod_type='ask', mod_order = 2)
-
 print(ask_2)
 
 </py-script>
 
-<div id="lineplot"></div>
-
-<py-script>
-from example import myplot
-import matplotlib.pyplot as plt
-
-theta,r = myplot(4)
-
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-
-pyscript.write('lineplot',fig)
-
-</py-script>
 
 </body>
 </html>

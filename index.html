@@ -3,19 +3,20 @@
 <head>
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
-<py-env>
-- numpy
-- matplotlib
-- scipy
-- paths:
-  - ./pycode/example.py
-  - ./src/channels.py
-  - ./src/modems.py
-</py-env>
 </head>
   
 <body>    
     
+<py-config>
+packages = ['numpy', 'matplotlib']
+
+[[fetch]]
+files = ['__init__.py', 'example.py', 'channels.py','modems.py','filters.py']
+from = 'src'
+to_folder = 'src'
+</py-config>
+
+	
 <div>TESTTTT</div>
 
 <py-script>

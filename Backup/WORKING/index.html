@@ -4,13 +4,13 @@
 <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
 <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css"/>
 </head>
-<div>TEST3</div>
+<div>TEST2</div>
 <body>    
     <py-config>
         packages = ['numpy', 'matplotlib']
 
         [[fetch]]
-        files = ['example.py', 'channels.py','modems.py', 'filters.py']
+        files = ['example.py']
         from = 'package'
         to_folder = 'package'
     </py-config>
@@ -20,12 +20,7 @@
 <py-script>
 print("HERE")
 from package.example import myplot
-from package.modems import *
 import matplotlib.pyplot as plt
-
-ask_2 = modems.ldapm(mod_type='ask', mod_order = 2)
-
-print(ask_2)
 
 theta,r = myplot(4)
 

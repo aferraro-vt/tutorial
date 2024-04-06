@@ -9,7 +9,6 @@
 - scipy
 - paths:
   - ./pycode/example.py
-  - ./pycode/package
   - ./src/channels
   - ./src/modems
 </py-env>
@@ -17,7 +16,7 @@
   
 <body>    
     
-<div id="lineplot"></div>
+<div>TESTTTT</div>
 
 <py-script>
 
@@ -25,7 +24,11 @@ import src.channels as channels
 
 ask_2 = modems.ldapm(mod_type='ask', mod_order = 2)
 
+print(ask_2)
+
 </py-script>
+
+<div id="lineplot"></div>
 
 <py-script>
 from example import myplot

@@ -11,7 +11,7 @@
 packages = ['numpy', 'matplotlib']
 
 [[fetch]]
-files = ['__init__.py', 'example.py', 'channels.py','modems.py','filters.py']
+files = ['example.py', 'channels.py','modems.py','filters.py']
 from = 'src'
 to_folder = 'src'
 </py-config>
@@ -21,8 +21,8 @@ to_folder = 'src'
 
 <py-script>
 
-from channels import *
-from modems import *
+import src.channels as channels
+import src.modems as modems
 
 ask_2 = modems.ldapm(mod_type='ask', mod_order = 2)
 

@@ -9,7 +9,8 @@
 - scipy
 - paths:
   - ./pycode/example.py
-  - ./src
+  - ./src/channels
+  - ./src/modems
 </py-env>
 </head>
   
@@ -19,7 +20,8 @@
 
 <py-script>
 
-import src.channels as channels
+import channels
+import modems
 
 ask_2 = modems.ldapm(mod_type='ask', mod_order = 2)
 

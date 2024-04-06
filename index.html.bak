@@ -20,14 +20,6 @@
 <div id="lineplot"></div>
 
 <py-script>
-
-import src.channels as channels
-
-ask_2 = modems.ldapm(mod_type='ask', mod_order = 2)
-
-</py-script>
-
-<py-script>
 from example import myplot
 import matplotlib.pyplot as plt
 

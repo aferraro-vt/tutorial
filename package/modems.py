@@ -1,5 +1,5 @@
 import numpy as np
-import filters as filters
+import package.filters as filters
 
 class ldapm:
     def __init__(self, sps=2, symb_table=None, mod_type='psk', mod_order=4, filt_type='rrc', beta=0.35, span=10, trim=1):
